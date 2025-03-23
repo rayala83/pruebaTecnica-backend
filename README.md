@@ -7,6 +7,47 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+##  instrucciones de instalación y ejecución
+
+## Requisitos previos
+
+Antes de ejecutar el proyecto, asegúrate de tener instalados los siguientes programas:
+
+- [PHP 8.0+](https://www.php.net/)
+- [Composer](https://getcomposer.org/)
+- [MySQL](https://www.mysql.com/)
+
+## Instalación
+
+1. **Clonar el repositorio**:
+
+   Clona el repositorio en tu máquina local:
+
+   ```bash
+   git clone https://github.com/rayala83/pruebaTecnica-backend.git
+   cd pruebaTecnica-backend
+
+2.- **conexiona base de datos**   
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=pruebatecnica-backend
+    DB_USERNAME=root
+    DB_PASSWORD=
+
+3.- **Para ejecutar la aplicación en el servidor local, ejecuta:**
+    php artisan serve
+    Esto iniciará el servidor en http://localhost:8000
+    Los endpoints de la API estarán disponibles en:
+
+    http://localhost:8000/api/auth - Autenticación
+
+    http://localhost:8000/api/regionalConfig - Configuración regional
+
+    http://localhost:8000/api/getRate - Obtener tarifas
+
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
