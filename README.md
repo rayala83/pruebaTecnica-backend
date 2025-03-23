@@ -35,6 +35,10 @@ Antes de ejecutar el proyecto, asegúrate de tener instalados los siguientes pro
     DB_USERNAME=root
     DB_PASSWORD=
 
+    la tabla de base de la base de datos es **productos**
+    y tiene id, name,quantity,weight,create_at,update_at
+    como columnas
+
 3.- **Para ejecutar la aplicación en el servidor local, ejecuta:**
     php artisan serve
     Esto iniciará el servidor en http://localhost:8000
