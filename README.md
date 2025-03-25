@@ -41,7 +41,7 @@ Antes de ejecutar el proyecto, asegúrate de tener instalados los siguientes pro
 
 3.- **Para ejecutar la aplicación en el servidor local, ejecuta:**
     php artisan serve
-    Esto iniciará el servidor en http://localhost:8000
+    Esto iniciará el servidor en http://127.0.0.1:8000/login/
     Los endpoints de la API estarán disponibles en:
 
     http://localhost:8000/api/auth - Autenticación
