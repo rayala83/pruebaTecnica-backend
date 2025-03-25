@@ -104,6 +104,7 @@
             @csrf
             <input type="hidden" name="comuna" value="{{ session('selected_comuna') }}">
             <input type="hidden" name="products" value="{{ json_encode(session('carrito')) }}">
+            <input type="hidden" name="token" value="{{ session('external_token') }}">
             <button type="submit" style="padding: 10px 15px; background-color: #007bff; color: white; border-radius: 5px;">
                 Solicitar tarifas de envío
             </button>

@@ -183,6 +183,9 @@ class ApiController extends Controller
     public function solicitarTarifas(Request $request)
     {
         
+        $token = session('external_token');
+       
+
         $request->validate([
             'comuna' => 'required|string',
             'products' => 'required|array',
@@ -190,12 +193,13 @@ class ApiController extends Controller
             'products.*.quantity' => 'required|integer',
         ]);
 
-        $authHeader = $request->header('Authorization');
-        if (!$authHeader || !str_starts_with($authHeader, 'Bearer ')) {
-            return response()->json(['error' => 'Token no proporcionado o formato incorrecto'], 400);
-        }
+        // $authHeader = $request->header('Authorization');
+        // if (!$authHeader || !str_starts_with($authHeader, 'Bearer ')) {
+        //     return response()->json(['error' => 'Token no proporcionado o formato incorrecto'], 400);
+        // }
 
-        $token = substr($authHeader, 7); 
+        //$token = substr($authHeader, 7); 
+        dd($token);
 
         try {
             
@@ -212,7 +216,7 @@ class ApiController extends Controller
     {
         $tarifas = session('tarifas');
 
-        return view('tarifas', compact('tarifas'));
+        return view('carrito.tarifas', compact('tarifas'));
     }
 }
     
